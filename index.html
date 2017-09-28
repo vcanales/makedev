@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>make dev - Quick backend dev environment</title>
+  <link rel="stylesheet" href="public/css/atom-one-dark.css" />
+  <link rel="stylesheet" href="public/css/menlo/menlo.css" />
+  <link rel="stylesheet" href="public/css/style.css" />
+  <script src="public/js/highlight/highlight.js" type="text/javascript"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <header>
+    <h1 class="logotype"><span class="cmd">$</span> make dev</h1>
+  </header>
+  <section class="hero">
+    <p class="phrase">Create a dev environment in minutes!</p>
+    <p class="explain">Visually select the required services, configure your images, get a ready to use `docker-compose.yml`</p>
+  </section>
+  <section class="signup">
+    Be the first to try it:
+    <form>
+      <input name="name" placeholder="Your name" type="text" />
+      <input name="email" placeholder="Your email" type="text" />
+      <button>Let me know!</button>
+    </form>
+  </section>
+  <section>
+    <pre>
+      <code class="YAML">
+        version: "3"
+        redis:
+          image: redis:alpine
+          volumes:
+            - ./docker/redis/:/data
+        mariadb:
+          image: mariadb
+          volumes:
+            - ./docker/mariadb/:/var/lib/mysql
+          environment:
+            MYSQL_RANDOM_PASSWORD: 'yes'
+            MYSQL_USER: makedev
+            MYSQL_PASSWORD: makedev
+            MYSQL_DATABASE: makedev
+        api:
+          build: .
+          ports:
+            - '3131:80'
+      </code>
+    </pre>
+  </section>
+</body>
+</html>

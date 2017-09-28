@@ -1,0 +1,62 @@
+body {
+  background-color: #21252b;
+  color: rgb(157, 165, 180);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+h1.logotype {
+  letter-spacing: 1px;
+  font-family: 'Menlo Regular', monospace;
+  font-size: 18px;
+}
+h1.logotype .cmd {
+  color: rgb(152, 195, 121);
+}
+.hero {
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero .phrase {
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 2.5px;
+  padding: 0 1rem;
+}
+.hero .explain {
+  padding: 0 2rem;
+}
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signup form {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.signup form input, .signup form button {
+  background-color: rgba(153, 187, 255, 0.04);
+  color: rgb(157, 165, 180);
+  font-size: 1rem;
+  padding: 1rem;
+}
+.signup form button {
+  box-shadow: 0px 0px 14px rgba(23, 14, 8, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+pre code {
+  font-family: 'Menlo Regular', monospace;
+  font-size: 12px;
+}
