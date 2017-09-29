@@ -60,7 +60,8 @@ pre, code, .hljs {
 }
 .signup form button {
   box-shadow: 0px 0px 14px rgba(23, 14, 8, 0.4);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(152, 195, 121);
+  color: #21252b;
 }
 .preview {
   width: 100%;
