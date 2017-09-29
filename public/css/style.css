@@ -17,6 +17,10 @@ h1.logotype {
 h1.logotype .cmd {
   color: rgb(152, 195, 121);
 }
+pre, code, .hljs {
+  padding: 0;
+  margin: 0;
+}
 .hero {
   height: 375px;
   display: flex;
@@ -48,6 +52,7 @@ h1.logotype .cmd {
 }
 .signup form input, .signup form button {
   background-color: rgba(153, 187, 255, 0.04);
+  border: none;
   color: rgb(157, 165, 180);
   font-size: 1rem;
   padding: 1rem;
@@ -55,6 +60,34 @@ h1.logotype .cmd {
 .signup form button {
   box-shadow: 0px 0px 14px rgba(23, 14, 8, 0.4);
   background-color: rgba(0, 0, 0, 0.3);
+}
+.preview {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.preview .form, .preview .code {
+  width: 50%;
+  padding: 2rem;
+}
+.preview .form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+.preview .form label {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+.preview .form input {
+  display: block;
+  width: 100%;
+  background-color: rgba(153, 187, 255, 0.04);
+  border: none;
+  outline: none;
+  color: rgb(157, 165, 180);
+  padding: 0.5rem;
 }
 pre code {
   font-family: 'Menlo Regular', monospace;

@@ -20,35 +20,37 @@
   </section>
   <section class="signup">
     Be the first to try it:
-    <form>
-      <input name="name" placeholder="Your name" type="text" />
-      <input name="email" placeholder="Your email" type="text" />
-      <button>Let me know!</button>
+    <form action="//makedev.us16.list-manage.com/subscribe/post?u=7af50d15fabd7e8390cb08f41&amp;id=aeb3cfb652" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <input name="FNAME" placeholder="Your name" type="text" />
+      <input name="EMAIL" placeholder="Your email" type="text" />
+      <button type="submit">Let me know!</button>
     </form>
   </section>
-  <section>
-    <pre>
-      <code class="YAML">
-        version: "3"
-        redis:
-          image: redis:alpine
-          volumes:
-            - ./docker/redis/:/data
-        mariadb:
-          image: mariadb
-          volumes:
-            - ./docker/mariadb/:/var/lib/mysql
-          environment:
-            MYSQL_RANDOM_PASSWORD: 'yes'
-            MYSQL_USER: makedev
-            MYSQL_PASSWORD: makedev
-            MYSQL_DATABASE: makedev
-        api:
-          build: .
-          ports:
-            - '3131:80'
-      </code>
-    </pre>
+  <section class="preview">
+    <div class="code">
+      <pre>
+        <code class="YAML">
+          version: "3"
+          redis:
+            image: redis:alpine
+            volumes:
+              - ./docker/redis/:/data
+          mariadb:
+            image: mariadb
+            volumes:
+              - ./docker/mariadb/:/var/lib/mysql
+            environment:
+              MYSQL_RANDOM_PASSWORD: 'yes'
+              MYSQL_USER: makedev
+              MYSQL_PASSWORD: makedev
+              MYSQL_DATABASE: makedev
+          api:
+            build: .
+            ports:
+              - '3131:80'
+        </code>
+      </pre>
+    </div>
   </section>
 </body>
 </html>
