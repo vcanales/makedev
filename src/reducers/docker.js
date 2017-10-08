@@ -2,7 +2,7 @@ import {
   SEARCH_START,
   SEARCH_END,
   SEARCH_ERROR,
-} from '@/actions/action-types';
+} from '../actions/action-types';
 
 const defaultState = {
   fetching: false,
@@ -14,30 +14,30 @@ const defaultState = {
 };
 
 const docker = (state = defaultState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case SEARCH_START:
-    return {
-      ...state,
-      fetching: true,
-      term: action.term,
-    };
+      return {
+        ...state,
+        fetching: true,
+        term: action.term,
+      };
     case SEARCH_END:
-    return {
-      ...state,
-      result: Object.assign({}, action.result),
-      fetching: false,
-      lastUpdated: action.receivedAt,
-      error: false,
-      term: '',
-    };
+      return {
+        ...state,
+        result: Object.assign({}, action.result),
+        fetching: false,
+        lastUpdated: action.receivedAt,
+        error: false,
+        term: '',
+      };
     case SEARCH_ERROR:
-    return {
-      ...state,
-      fetching: false,
-      error: action.error,
-    };
+      return {
+        ...state,
+        fetching: false,
+        error: action.error,
+      };
     default:
-    return state;
+      return state;
   }
 };
 
