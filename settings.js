@@ -1,3 +1,4 @@
+// Contains all docker-compose configuration parameters
 {
   build: {
     type: 'string',
