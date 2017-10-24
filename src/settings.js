@@ -1,66 +1,65 @@
 // Contains all docker-compose configuration parameters
-{
+export default {
   build: {
     type: 'string',
-    settings: [ 'context', 'dockerfile', 'args', 'cache_from', 'labels' ],
-  }
-  command: [ 'string', 'array' ],
+    settings: ['context', 'dockerfile', 'args', 'cache_from', 'labels'],
+  },
+  command: ['string', 'array'],
   configs: 'array',
   labels: 'object',
-  cap_add: 'array'
+  cap_add: 'array',
   cap_drop: 'array',
   context: 'string',
   type: 'string',
   dockerfile: 'string',
   args: 'object',
   cache_from: 'array',
-  labels: 'object',
   cgroup_parent: 'string',
   credential_spec: {
     type: 'string',
-    settings: [ 'file', 'registry' ],
+    settings: ['file', 'registry'],
   },
   devices: 'array',
   depends_on: 'array',
-  dns: [ 'string', 'array' ],
-  dns_search: [ 'string', 'array' ],
-  tmpfs: [ 'string', 'array' ],
-  entrypoint: [ 'string', 'array' ],
-  env_file: [ 'string', 'array' ],
-  environment: [ 'array', 'object' ],
-  expose: [ 'array' ],
-  external_links: [ 'array' ],
-  extra_hosts: [ 'array' ],
+  dns: ['string', 'array'],
+  dns_search: ['string', 'array'],
+  tmpfs: ['string', 'array'],
+  entrypoint: ['string', 'array'],
+  env_file: ['string', 'array'],
+  environment: ['array', 'object'],
+  expose: ['array'],
+  external_links: ['array'],
+  extra_hosts: ['array'],
   healthcheck: {
     type: 'object',
-    settings: [ 'test', 'interval', 'timeout', 'retries' ],
+    settings: ['test', 'interval', 'timeout', 'retries'],
   },
   isolation: 'string',
   links: 'array',
   logging: 'object',
   network_mode: 'string',
   networks: {
-    type: [ 'array', 'object' ],
-    settings: [ 'aliases' ],
+    type: ['array', 'object'],
+    settings: ['aliases'],
   },
   aliases: {
-    type: [ 'array', 'object' ],
-    settings: [ 'ipv4_address', 'ipv6_address', 'ipam', 'enable_ipv6', 'driver' ],
+    type: ['array', 'object'],
+    settings: ['ipv4_address', 'ipv6_address', 'ipam', 'enable_ipv6', 'driver'],
   },
   pid: 'string',
   ports: {
-    type: [ 'array', 'object' ],
-    settings: [ 'target', 'published', 'protocol', 'mode' ],
+    type: ['array', 'object'],
+    settings: ['target', 'published', 'protocol', 'mode'],
   },
-  secrets: [ 'array', 'object' ],
+  secrets: ['array', 'object'],
   stop_grace_period: 'string',
   stop_signal: 'string',
   sysctls: 'string',
   ulimits: 'object',
   userns_mode: 'string',
   volumes: {
-    type: [ 'array', 'object' ],
-    settings: [ 'type', 'source', 'target', 'volume' ],
+    type: ['array', 'object'],
+    settings: ['type', 'source', 'target', 'volume'],
   },
   user: 'string',
   working_dir: 'string',
@@ -68,13 +67,13 @@
   hostname: 'string',
   ipc: 'string',
   mac_address: 'string',
-  privileged: 'boolean'
+  privileged: 'boolean',
   read_only: 'boolean',
   shm_size: 'string',
   stdin_open: 'boolean',
   tty: 'boolean',
   restart: 'string',
-  deploy: { //version 3
+  deploy: { // version 3
     type: 'object',
     settings: [
       'replicas',
@@ -84,7 +83,7 @@
       'mode',
       'placement',
       'resources',
-      'endpoint_mode', //version 3.3
+      'endpoint_mode', // version 3.3
     ],
     not_supported: [
       'build',
@@ -102,5 +101,5 @@
       'sysctls',
       'userns_mode',
     ],
-  }
-},
+  },
+};

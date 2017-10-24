@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { searchIfNeeded } from '../actions';
+import DockerConfig from '../components/DockerConfig';
+import config from '../settings';
 import './App.css';
 
 const App = ({
@@ -35,6 +37,9 @@ const App = ({
           { JSON.stringify(result) }
         </code>
       </pre>
+      <br />
+      <br />
+      <DockerConfig settings={config} />
     </div>
   );
 };
